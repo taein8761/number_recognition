@@ -75,7 +75,8 @@ void saveimage() {
     string save_name;
     cout << "파일명 입력:";
     cin >> save_name;
-    Mat mat500 = mat(Rect(0, 0, 500, 500));
+    Mat mat500 = mat(Rect(2, 2, 496, 496));
+    resize(mat500, mat500, Size(500, 500));
     imwrite(save_name, mat500);
     cout << save_name << "파일이 저장됨" << endl;
 }
